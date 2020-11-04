@@ -1,6 +1,3 @@
-#"Подземелье", "Коридор", "Оружейная", "Спальня", "Холл", "Кухня", "Балкон"
-#1 - север, 2 - восток, 3 - юг, 4 - запад
-
 roomList = []
 room = ["Подземелье", 3, 1, None, None]
 roomList.append(room)
@@ -21,20 +18,18 @@ currentRoomIndex = 0
 
 directionList = ["Север", "Восток", "Юг", "Запад"]
 
-# currentRoomName = roomList[0][0]
-# lastRoom = roomList[6][0]
-
 while currentRoomIndex != 6:
     print("-----------")
 
     currentRoom = roomList[currentRoomIndex]
+    print(currentRoom[0])
     direction = ""
 
     for i in range(1, 5):
         if currentRoom[i] != None:
             direction += directionList[i-1] + " "
 
-    print(direction)
+    print("Доступные направления: " + direction)
     print("Введите направление")
 
     userDirection = input()
